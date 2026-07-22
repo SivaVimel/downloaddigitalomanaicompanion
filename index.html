@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#0B0B10">
 <meta name="color-scheme" content="dark">
 <title>Meet Your AI Companion — DigitalOman.ai</title>
-<meta name="description" content="More than just AI. A friend who's always here. Meet the companions of DigitalOman.ai — private, built in Oman, free to start.">
+<meta name="description" content="More than just AI. A friend who's always here. Browse the companions of DigitalOman.ai and download the app to start chatting — private, built in Oman.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Meet Your AI Companion — DigitalOman.ai">
 <meta property="og:description" content="More than just AI. A friend who's always here. Private, built in Oman.">
@@ -15,173 +15,259 @@
 <link rel="icon" href="/assets/logo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0B0B10;--card:#14141C;--border:rgba(255,255,255,.09);--white:#F2F2F5;--muted:#9A9AA8;
-  --cyan:#00BCD4;--cyan-deep:#5CE1F2;--violet:#8B5CF6;
-  --font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;--maxw:1180px}
+:root{
+  color-scheme:dark;
+  --bg:#0B0B10; --bg-2:#14141C; --surface:#14141C; --surface-2:#1B1B26;
+  --border:rgba(255,255,255,.09); --border-soft:rgba(255,255,255,.05); --border-cyan:rgba(0,188,212,.38);
+  --black:#F2F2F5; --silver:#B6B6C2; --silver-2:#9A9AA8; --muted:#7C7C8A; --dim:#5E5E6C;
+  --cyan:#00BCD4; --cyan-bright:#26C6DA; --cyan-deep:#5CE1F2; --cyan-wash:rgba(0,188,212,.10); --on-cyan:#06222A;
+  --violet:#8B5CF6;
+  --radius-sm:10px; --radius:16px; --radius-lg:24px;
+  --font:"Inter",-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,system-ui,sans-serif;
+  --mono:"JetBrains Mono","SF Mono",ui-monospace,monospace;
+  --maxw:1180px;
+}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--white);font-family:var(--font);-webkit-font-smoothing:antialiased;line-height:1.5;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:radial-gradient(1100px 560px at 84% -12%,rgba(139,92,246,.16),transparent 60%),
-             radial-gradient(900px 520px at 0% 22%,rgba(0,188,212,.10),transparent 60%)}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--black);font-family:var(--font);
+  font-feature-settings:"ss01","cv11";-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  line-height:1.5;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(1200px 620px at 86% -12%,rgba(139,92,246,.14),transparent 60%),
+             radial-gradient(900px 500px at 0% 26%,rgba(0,188,212,.09),transparent 60%)}
 a{color:inherit;text-decoration:none}
-.wrap{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:0 clamp(18px,4vw,36px)}
-.nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(20px);background:rgba(11,11,16,.72);border-bottom:1px solid rgba(255,255,255,.06)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:13px;padding-bottom:13px}
-.brand{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:18px}
-.brand img{width:28px;height:28px;border-radius:7px}
-.brand .c{background:linear-gradient(180deg,#5CE1F2,#00ACC1);-webkit-background-clip:text;background-clip:text;color:transparent}
-.cta{font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;background:#fff;color:#0B0B10}
-.hero{text-align:center;padding:clamp(56px,10vh,120px) 0 clamp(30px,5vh,54px)}
-.eyebrow{display:inline-block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan-deep);
-  border:1px solid rgba(0,188,212,.34);border-radius:999px;padding:6px 14px;margin-bottom:22px}
-h1{font-size:clamp(34px,7vw,68px);line-height:1.03;letter-spacing:-.035em;margin:0 0 14px;font-weight:700}
-h1 .g{background:linear-gradient(90deg,#5CE1F2,#8B5CF6);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{font-size:clamp(16px,1.7vw,20px);color:var(--muted);max-width:44ch;margin:0 auto 26px}
-.dl{display:inline-flex;gap:10px;align-items:center;font-weight:600;padding:14px 26px;border-radius:999px;
-  background:linear-gradient(90deg,#00BCD4,#8B5CF6);color:#fff;box-shadow:0 14px 40px rgba(0,188,212,.25)}
-.dl:hover{transform:translateY(-1px)}
-.count{margin-top:16px;font-size:13px;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;padding:20px 0 70px}
-.card{position:relative;display:block;border-radius:16px;overflow:hidden;border:1px solid var(--border);background:var(--card);
-  aspect-ratio:4/5;transition:transform .18s ease,box-shadow .25s ease,border-color .2s ease}
-.card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
-.card .nm{position:absolute;left:10px;bottom:9px;z-index:2;font-weight:600;font-size:15px;
-  text-shadow:0 1px 10px rgba(0,0,0,.7)}
-.card::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.72))}
-.card:hover{transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 18px 44px rgba(0,0,0,.5),0 0 0 1px rgba(0,188,212,.4)}
-.card:hover img{transform:scale(1.05)}
-.footer{border-top:1px solid rgba(255,255,255,.06);padding:24px 0;color:var(--muted);font-size:12px}
-.footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.footer a{color:#B6B6C2}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+button{font-family:inherit;cursor:pointer}
+::selection{background:var(--cyan);color:#06222A}
+.gr-silver{color:#F2F2F5}
+.gr-cyan{background:linear-gradient(180deg,#5CE1F2 0%,#00ACC1 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ── nav ── */
+.topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:18px;
+  padding:13px 30px;backdrop-filter:saturate(160%) blur(20px);-webkit-backdrop-filter:saturate(160%) blur(20px);
+  background:rgba(11,11,16,.72);border-bottom:1px solid transparent;transition:background .25s,border-color .25s}
+.topbar[data-scrolled="true"]{background:rgba(11,11,16,.9);border-bottom-color:rgba(255,255,255,.07)}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand img{width:26px;height:26px;border-radius:7px}
+.wordmark{font-size:18px;font-weight:600;letter-spacing:-.015em}
+.searchwrap{position:relative;flex:1;max-width:560px}
+.searchwrap svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--muted)}
+#q{width:100%;padding:12px 16px 12px 43px;border:1px solid var(--border);border-radius:14px;
+  background:var(--surface-2);font-size:15px;font-family:var(--font);color:var(--black);
+  transition:border-color .2s,box-shadow .2s,background .2s}
+#q::placeholder{color:var(--dim)}
+#q:focus{outline:none;border-color:var(--border-cyan);background:var(--surface);box-shadow:0 0 0 4px var(--cyan-wash)}
+.getapp{flex-shrink:0;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;
+  padding:10px 18px;border-radius:999px;background:linear-gradient(90deg,#00BCD4,#8B5CF6);color:#fff;
+  box-shadow:0 8px 24px -8px rgba(0,188,212,.5);transition:transform .16s,box-shadow .25s}
+.getapp:hover{transform:translateY(-1px);box-shadow:0 12px 30px -8px rgba(0,188,212,.6)}
+.getapp svg{width:14px;height:14px}
+
+/* ── hero strip ── */
+.hero{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:clamp(30px,6vw,58px) 30px clamp(10px,2vw,18px);text-align:center}
+.eyebrow{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--cyan-deep);margin:0 0 16px;padding:5px 13px;border:1px solid var(--border-cyan);border-radius:999px;background:var(--cyan-wash)}
+.hero h1{font-size:clamp(28px,5.4vw,50px);line-height:1.05;letter-spacing:-.035em;font-weight:700;margin:0 0 12px}
+.hero h1 .g{background:linear-gradient(90deg,#5CE1F2,#8B5CF6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:clamp(15px,1.6vw,18px);color:var(--silver);max-width:52ch;margin:0 auto}
+
+/* ── results ── */
+.results{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:22px 30px 90px;min-width:0}
+.toolbar{display:flex;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+.showing{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+.showing b{color:var(--black);font-weight:500}
+.sortwrap{margin-left:auto;display:flex;align-items:center;gap:9px}
+.sortwrap label{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--dim)}
+#sort{padding:8px 12px;border:1px solid var(--border);border-radius:10px;background:var(--surface-2);
+  font-size:13px;font-family:var(--font);color:var(--black)}
+#sort:focus{outline:none;border-color:var(--border-cyan)}
+
+/* ── grid + cards ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:16px}
+.card{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  overflow:hidden;cursor:pointer;display:flex;flex-direction:column;transition:border-color .2s,transform .2s,box-shadow .25s}
+.card:hover{border-color:var(--border-cyan);transform:translateY(-4px);box-shadow:0 16px 40px -14px rgba(0,188,212,.35)}
+.card:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.thumb{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--bg-2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
+.card:hover .thumb img{transform:scale(1.05)}
+.thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,10,16,.72))}
+.nm{position:absolute;left:12px;bottom:10px;z-index:2;font-weight:600;font-size:16px;letter-spacing:-.01em;text-shadow:0 1px 10px rgba(0,0,0,.7)}
+.cbody{padding:11px 13px 13px;display:flex;flex-direction:column;gap:9px;flex:1}
+.cdesc{font-size:12.5px;color:var(--silver-2);line-height:1.5;margin:0;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cta-mini{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--cyan-deep)}
+.cta-mini svg{width:13px;height:13px}
+
+/* ── pager ── */
+.pager{display:flex;justify-content:center;align-items:center;gap:7px;margin-top:38px;flex-wrap:wrap}
+.pager button{min-width:40px;height:40px;padding:0 13px;border:1px solid var(--border);background:var(--surface);
+  border-radius:12px;font-family:var(--mono);font-size:13px;color:var(--silver-2);transition:all .16s}
+.pager button:hover:not(:disabled){border-color:var(--border-cyan);color:var(--cyan-deep);transform:translateY(-1px)}
+.pager button.on{background:var(--cyan);border-color:var(--cyan);color:var(--on-cyan);font-weight:500}
+.pager button:disabled{opacity:.4;cursor:default}
+.pager .gap{color:var(--dim);font-family:var(--mono)}
+
+/* ── states ── */
+.state{grid-column:1/-1;text-align:center;padding:80px 20px;color:var(--muted)}
+.state .em{font-size:20px;font-weight:600;color:var(--black);margin-bottom:6px;letter-spacing:-.01em}
+
+/* ── detail sheet ── */
+.backdrop{position:fixed;inset:0;background:rgba(0,0,0,.62);backdrop-filter:blur(3px);z-index:60;display:none;opacity:0;transition:opacity .2s}
+.backdrop.open{display:block;opacity:1}
+.sheet{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);background:var(--bg);z-index:61;
+  box-shadow:-24px 0 60px -34px rgba(0,0,0,.6);transform:translateX(100%);
+  transition:transform .28s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;border-left:1px solid var(--border)}
+.sheet.open{transform:translateX(0)}
+.sheet .sh-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;border-bottom:1px solid var(--border)}
+.sheet .sh-top h2{font-size:20px;font-weight:600;margin:0;letter-spacing:-.02em}
+.sheet .xbtn{border:1px solid var(--border);background:var(--surface);width:36px;height:36px;border-radius:11px;
+  font-size:18px;color:var(--muted);flex-shrink:0;transition:all .16s}
+.sheet .xbtn:hover{border-color:var(--border-cyan);color:var(--cyan-deep)}
+.sbody{padding:0 0 26px;overflow-y:auto;flex:1}
+.sbody .poster{width:100%;display:block;border-bottom:1px solid var(--border)}
+.sbody .pad{padding:20px 22px 0}
+.sdesc{font-size:14.5px;line-height:1.62;color:var(--silver);white-space:pre-line;margin:0 0 22px}
+.openbtn{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(90deg,#00BCD4,#8B5CF6);
+  color:#fff;border:0;padding:15px 24px;border-radius:14px;font-size:15px;font-weight:600;text-decoration:none;
+  box-shadow:0 10px 30px -8px rgba(0,188,212,.55);transition:transform .18s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
+.openbtn:hover{transform:translateY(-2px);box-shadow:0 16px 40px -8px rgba(0,188,212,.65)}
+.sfoot{margin:14px 0 0;text-align:center;font-family:var(--mono);font-size:11.5px;color:var(--dim);letter-spacing:.02em}
+
+@media (max-width:640px){
+  .topbar{gap:10px 12px;padding:11px 14px;flex-wrap:wrap}
+  .getapp span{display:none}
+  .getapp{padding:9px 12px}
+  .searchwrap{order:5;flex-basis:100%;max-width:none;min-width:0}
+  .results{padding:18px 16px 76px}
+  .hero{padding:26px 16px 6px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<header class="nav"><div class="wrap">
-  <a class="brand" href="/"><img src="/assets/logo.png" alt=""><span>Digital<span class="c">Oman</span>.ai</span></a>
-  <a class="cta" href="/download">Get the app</a>
-</div></header>
 
-<main class="wrap">
-  <section class="hero">
-    <span class="eyebrow">Your Personal AI</span>
-    <h1>More than just AI.<br><span class="g">A friend who's always here.</span></h1>
-    <p class="lead">Meet the companions of DigitalOman.ai. Chat anytime, get understood, and keep it 100% private. Built in Oman.</p>
-    <a class="dl" href="/download">Download DigitalOman.ai
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
-    </a>
-    <div class="count">100 companions and counting</div>
-  </section>
+<header class="topbar" id="topbar">
+  <a class="brand" href="/"><img src="/assets/logo.png" alt=""><span class="wordmark"><span class="gr-silver">Digital</span><span class="gr-cyan">Oman</span><span class="gr-silver">.ai</span></span></a>
+  <div class="searchwrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    <input id="q" type="text" placeholder="Search companions by name…" autocomplete="off" spellcheck="false">
+  </div>
+  <a class="getapp" href="/download">Get the app
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+    <span></span></a>
+</header>
 
-  <section class="grid">
-<a class="card" href="/c/layla-1"><img loading="lazy" src="/characters/thumb/layla-1.jpg" alt="Layla, AI companion"><span class="nm">Layla</span></a>
-<a class="card" href="/c/noor-2"><img loading="lazy" src="/characters/thumb/noor-2.jpg" alt="Noor, AI companion"><span class="nm">Noor</span></a>
-<a class="card" href="/c/salma-3"><img loading="lazy" src="/characters/thumb/salma-3.jpg" alt="Salma, AI companion"><span class="nm">Salma</span></a>
-<a class="card" href="/c/yara-4"><img loading="lazy" src="/characters/thumb/yara-4.jpg" alt="Yara, AI companion"><span class="nm">Yara</span></a>
-<a class="card" href="/c/sofia-5"><img loading="lazy" src="/characters/thumb/sofia-5.jpg" alt="Sofia, AI companion"><span class="nm">Sofia</span></a>
-<a class="card" href="/c/aaliyah-6"><img loading="lazy" src="/characters/thumb/aaliyah-6.jpg" alt="Aaliyah, AI companion"><span class="nm">Aaliyah</span></a>
-<a class="card" href="/c/mia-7"><img loading="lazy" src="/characters/thumb/mia-7.jpg" alt="Mia, AI companion"><span class="nm">Mia</span></a>
-<a class="card" href="/c/nadia-8"><img loading="lazy" src="/characters/thumb/nadia-8.jpg" alt="Nadia, AI companion"><span class="nm">Nadia</span></a>
-<a class="card" href="/c/elena-9"><img loading="lazy" src="/characters/thumb/elena-9.jpg" alt="Elena, AI companion"><span class="nm">Elena</span></a>
-<a class="card" href="/c/zoya-10"><img loading="lazy" src="/characters/thumb/zoya-10.jpg" alt="Zoya, AI companion"><span class="nm">Zoya</span></a>
-<a class="card" href="/c/hana-11"><img loading="lazy" src="/characters/thumb/hana-11.jpg" alt="Hana, AI companion"><span class="nm">Hana</span></a>
-<a class="card" href="/c/amira-12"><img loading="lazy" src="/characters/thumb/amira-12.jpg" alt="Amira, AI companion"><span class="nm">Amira</span></a>
-<a class="card" href="/c/dana-13"><img loading="lazy" src="/characters/thumb/dana-13.jpg" alt="Dana, AI companion"><span class="nm">Dana</span></a>
-<a class="card" href="/c/farah-14"><img loading="lazy" src="/characters/thumb/farah-14.jpg" alt="Farah, AI companion"><span class="nm">Farah</span></a>
-<a class="card" href="/c/rania-15"><img loading="lazy" src="/characters/thumb/rania-15.jpg" alt="Rania, AI companion"><span class="nm">Rania</span></a>
-<a class="card" href="/c/reem-16"><img loading="lazy" src="/characters/thumb/reem-16.jpg" alt="Reem, AI companion"><span class="nm">Reem</span></a>
-<a class="card" href="/c/sara-17"><img loading="lazy" src="/characters/thumb/sara-17.jpg" alt="Sara, AI companion"><span class="nm">Sara</span></a>
-<a class="card" href="/c/lara-18"><img loading="lazy" src="/characters/thumb/lara-18.jpg" alt="Lara, AI companion"><span class="nm">Lara</span></a>
-<a class="card" href="/c/tara-19"><img loading="lazy" src="/characters/thumb/tara-19.jpg" alt="Tara, AI companion"><span class="nm">Tara</span></a>
-<a class="card" href="/c/rana-20"><img loading="lazy" src="/characters/thumb/rana-20.jpg" alt="Rana, AI companion"><span class="nm">Rana</span></a>
-<a class="card" href="/c/hala-21"><img loading="lazy" src="/characters/thumb/hala-21.jpg" alt="Hala, AI companion"><span class="nm">Hala</span></a>
-<a class="card" href="/c/maha-22"><img loading="lazy" src="/characters/thumb/maha-22.jpg" alt="Maha, AI companion"><span class="nm">Maha</span></a>
-<a class="card" href="/c/dima-23"><img loading="lazy" src="/characters/thumb/dima-23.jpg" alt="Dima, AI companion"><span class="nm">Dima</span></a>
-<a class="card" href="/c/leen-24"><img loading="lazy" src="/characters/thumb/leen-24.jpg" alt="Leen, AI companion"><span class="nm">Leen</span></a>
-<a class="card" href="/c/zara-25"><img loading="lazy" src="/characters/thumb/zara-25.jpg" alt="Zara, AI companion"><span class="nm">Zara</span></a>
-<a class="card" href="/c/dalia-26"><img loading="lazy" src="/characters/thumb/dalia-26.jpg" alt="Dalia, AI companion"><span class="nm">Dalia</span></a>
-<a class="card" href="/c/aya-27"><img loading="lazy" src="/characters/thumb/aya-27.jpg" alt="Aya, AI companion"><span class="nm">Aya</span></a>
-<a class="card" href="/c/malak-28"><img loading="lazy" src="/characters/thumb/malak-28.jpg" alt="Malak, AI companion"><span class="nm">Malak</span></a>
-<a class="card" href="/c/lina-29"><img loading="lazy" src="/characters/thumb/lina-29.jpg" alt="Lina, AI companion"><span class="nm">Lina</span></a>
-<a class="card" href="/c/maya-30"><img loading="lazy" src="/characters/thumb/maya-30.jpg" alt="Maya, AI companion"><span class="nm">Maya</span></a>
-<a class="card" href="/c/ghala-31"><img loading="lazy" src="/characters/thumb/ghala-31.jpg" alt="Ghala, AI companion"><span class="nm">Ghala</span></a>
-<a class="card" href="/c/shatha-32"><img loading="lazy" src="/characters/thumb/shatha-32.jpg" alt="Shatha, AI companion"><span class="nm">Shatha</span></a>
-<a class="card" href="/c/bushra-33"><img loading="lazy" src="/characters/thumb/bushra-33.jpg" alt="Bushra, AI companion"><span class="nm">Bushra</span></a>
-<a class="card" href="/c/rahma-34"><img loading="lazy" src="/characters/thumb/rahma-34.jpg" alt="Rahma, AI companion"><span class="nm">Rahma</span></a>
-<a class="card" href="/c/asma-35"><img loading="lazy" src="/characters/thumb/asma-35.jpg" alt="Asma, AI companion"><span class="nm">Asma</span></a>
-<a class="card" href="/c/iman-36"><img loading="lazy" src="/characters/thumb/iman-36.jpg" alt="Iman, AI companion"><span class="nm">Iman</span></a>
-<a class="card" href="/c/hind-37"><img loading="lazy" src="/characters/thumb/hind-37.jpg" alt="Hind, AI companion"><span class="nm">Hind</span></a>
-<a class="card" href="/c/wafa-38"><img loading="lazy" src="/characters/thumb/wafa-38.jpg" alt="Wafa, AI companion"><span class="nm">Wafa</span></a>
-<a class="card" href="/c/sana-39"><img loading="lazy" src="/characters/thumb/sana-39.jpg" alt="Sana, AI companion"><span class="nm">Sana</span></a>
-<a class="card" href="/c/rima-40"><img loading="lazy" src="/characters/thumb/rima-40.jpg" alt="Rima, AI companion"><span class="nm">Rima</span></a>
-<a class="card" href="/c/lujain-41"><img loading="lazy" src="/characters/thumb/lujain-41.jpg" alt="Lujain, AI companion"><span class="nm">Lujain</span></a>
-<a class="card" href="/c/aisha-42"><img loading="lazy" src="/characters/thumb/aisha-42.jpg" alt="Aisha, AI companion"><span class="nm">Aisha</span></a>
-<a class="card" href="/c/dina-43"><img loading="lazy" src="/characters/thumb/dina-43.jpg" alt="Dina, AI companion"><span class="nm">Dina</span></a>
-<a class="card" href="/c/judy-44"><img loading="lazy" src="/characters/thumb/judy-44.jpg" alt="Judy, AI companion"><span class="nm">Judy</span></a>
-<a class="card" href="/c/rosa-45"><img loading="lazy" src="/characters/thumb/rosa-45.jpg" alt="Rosa, AI companion"><span class="nm">Rosa</span></a>
-<a class="card" href="/c/elif-46"><img loading="lazy" src="/characters/thumb/elif-46.jpg" alt="Elif, AI companion"><span class="nm">Elif</span></a>
-<a class="card" href="/c/deniz-47"><img loading="lazy" src="/characters/thumb/deniz-47.jpg" alt="Deniz, AI companion"><span class="nm">Deniz</span></a>
-<a class="card" href="/c/sude-48"><img loading="lazy" src="/characters/thumb/sude-48.jpg" alt="Sude, AI companion"><span class="nm">Sude</span></a>
-<a class="card" href="/c/zeynep-49"><img loading="lazy" src="/characters/thumb/zeynep-49.jpg" alt="Zeynep, AI companion"><span class="nm">Zeynep</span></a>
-<a class="card" href="/c/hayat-50"><img loading="lazy" src="/characters/thumb/hayat-50.jpg" alt="Hayat, AI companion"><span class="nm">Hayat</span></a>
-<a class="card" href="/c/lamar-51"><img loading="lazy" src="/characters/thumb/lamar-51.jpg" alt="Lamar, AI companion"><span class="nm">Lamar</span></a>
-<a class="card" href="/c/retaj-52"><img loading="lazy" src="/characters/thumb/retaj-52.jpg" alt="Retaj, AI companion"><span class="nm">Retaj</span></a>
-<a class="card" href="/c/sila-53"><img loading="lazy" src="/characters/thumb/sila-53.jpg" alt="Sila, AI companion"><span class="nm">Sila</span></a>
-<a class="card" href="/c/defne-54"><img loading="lazy" src="/characters/thumb/defne-54.jpg" alt="Defne, AI companion"><span class="nm">Defne</span></a>
-<a class="card" href="/c/lulwa-55"><img loading="lazy" src="/characters/thumb/lulwa-55.jpg" alt="Lulwa, AI companion"><span class="nm">Lulwa</span></a>
-<a class="card" href="/c/maria-56"><img loading="lazy" src="/characters/thumb/maria-56.jpg" alt="Maria, AI companion"><span class="nm">Maria</span></a>
-<a class="card" href="/c/yasmin-57"><img loading="lazy" src="/characters/thumb/yasmin-57.jpg" alt="Yasmin, AI companion"><span class="nm">Yasmin</span></a>
-<a class="card" href="/c/dunya-58"><img loading="lazy" src="/characters/thumb/dunya-58.jpg" alt="Dunya, AI companion"><span class="nm">Dunya</span></a>
-<a class="card" href="/c/salwa-59"><img loading="lazy" src="/characters/thumb/salwa-59.jpg" alt="Salwa, AI companion"><span class="nm">Salwa</span></a>
-<a class="card" href="/c/warda-60"><img loading="lazy" src="/characters/thumb/warda-60.jpg" alt="Warda, AI companion"><span class="nm">Warda</span></a>
-<a class="card" href="/c/nabila-61"><img loading="lazy" src="/characters/thumb/nabila-61.jpg" alt="Nabila, AI companion"><span class="nm">Nabila</span></a>
-<a class="card" href="/c/selin-62"><img loading="lazy" src="/characters/thumb/selin-62.jpg" alt="Selin, AI companion"><span class="nm">Selin</span></a>
-<a class="card" href="/c/derya-63"><img loading="lazy" src="/characters/thumb/derya-63.jpg" alt="Derya, AI companion"><span class="nm">Derya</span></a>
-<a class="card" href="/c/naz-64"><img loading="lazy" src="/characters/thumb/naz-64.jpg" alt="Naz, AI companion"><span class="nm">Naz</span></a>
-<a class="card" href="/c/amara-65"><img loading="lazy" src="/characters/thumb/amara-65.jpg" alt="Amara, AI companion"><span class="nm">Amara</span></a>
-<a class="card" href="/c/bella-66"><img loading="lazy" src="/characters/thumb/bella-66.jpg" alt="Bella, AI companion"><span class="nm">Bella</span></a>
-<a class="card" href="/c/chloe-67"><img loading="lazy" src="/characters/thumb/chloe-67.jpg" alt="Chloe, AI companion"><span class="nm">Chloe</span></a>
-<a class="card" href="/c/ava-68"><img loading="lazy" src="/characters/thumb/ava-68.jpg" alt="Ava, AI companion"><span class="nm">Ava</span></a>
-<a class="card" href="/c/isla-69"><img loading="lazy" src="/characters/thumb/isla-69.jpg" alt="Isla, AI companion"><span class="nm">Isla</span></a>
-<a class="card" href="/c/jana-70"><img loading="lazy" src="/characters/thumb/jana-70.jpg" alt="Jana, AI companion"><span class="nm">Jana</span></a>
-<a class="card" href="/c/emma-71"><img loading="lazy" src="/characters/thumb/emma-71.jpg" alt="Emma, AI companion"><span class="nm">Emma</span></a>
-<a class="card" href="/c/nora-72"><img loading="lazy" src="/characters/thumb/nora-72.jpg" alt="Nora, AI companion"><span class="nm">Nora</span></a>
-<a class="card" href="/c/alina-73"><img loading="lazy" src="/characters/thumb/alina-73.jpg" alt="Alina, AI companion"><span class="nm">Alina</span></a>
-<a class="card" href="/c/diana-74"><img loading="lazy" src="/characters/thumb/diana-74.jpg" alt="Diana, AI companion"><span class="nm">Diana</span></a>
-<a class="card" href="/c/vera-75"><img loading="lazy" src="/characters/thumb/vera-75.jpg" alt="Vera, AI companion"><span class="nm">Vera</span></a>
-<a class="card" href="/c/nina-76"><img loading="lazy" src="/characters/thumb/nina-76.jpg" alt="Nina, AI companion"><span class="nm">Nina</span></a>
-<a class="card" href="/c/kaya-77"><img loading="lazy" src="/characters/thumb/kaya-77.jpg" alt="Kaya, AI companion"><span class="nm">Kaya</span></a>
-<a class="card" href="/c/sham-78"><img loading="lazy" src="/characters/thumb/sham-78.jpg" alt="Sham, AI companion"><span class="nm">Sham</span></a>
-<a class="card" href="/c/helin-79"><img loading="lazy" src="/characters/thumb/helin-79.jpg" alt="Helin, AI companion"><span class="nm">Helin</span></a>
-<a class="card" href="/c/talia-80"><img loading="lazy" src="/characters/thumb/talia-80.jpg" alt="Talia, AI companion"><span class="nm">Talia</span></a>
-<a class="card" href="/c/priya-81"><img loading="lazy" src="/characters/thumb/priya-81.jpg" alt="Priya, AI companion"><span class="nm">Priya</span></a>
-<a class="card" href="/c/amina-82"><img loading="lazy" src="/characters/thumb/amina-82.jpg" alt="Amina, AI companion"><span class="nm">Amina</span></a>
-<a class="card" href="/c/rojin-83"><img loading="lazy" src="/characters/thumb/rojin-83.jpg" alt="Rojin, AI companion"><span class="nm">Rojin</span></a>
-<a class="card" href="/c/ipek-84"><img loading="lazy" src="/characters/thumb/ipek-84.jpg" alt="Ipek, AI companion"><span class="nm">Ipek</span></a>
-<a class="card" href="/c/melis-85"><img loading="lazy" src="/characters/thumb/melis-85.jpg" alt="Melis, AI companion"><span class="nm">Melis</span></a>
-<a class="card" href="/c/ceyda-86"><img loading="lazy" src="/characters/thumb/ceyda-86.jpg" alt="Ceyda, AI companion"><span class="nm">Ceyda</span></a>
-<a class="card" href="/c/jood-87"><img loading="lazy" src="/characters/thumb/jood-87.jpg" alt="Jood, AI companion"><span class="nm">Jood</span></a>
-<a class="card" href="/c/karma-88"><img loading="lazy" src="/characters/thumb/karma-88.jpg" alt="Karma, AI companion"><span class="nm">Karma</span></a>
-<a class="card" href="/c/elissa-89"><img loading="lazy" src="/characters/thumb/elissa-89.jpg" alt="Elissa, AI companion"><span class="nm">Elissa</span></a>
-<a class="card" href="/c/camila-90"><img loading="lazy" src="/characters/thumb/camila-90.jpg" alt="Camila, AI companion"><span class="nm">Camila</span></a>
-<a class="card" href="/c/valentina-91"><img loading="lazy" src="/characters/thumb/valentina-91.jpg" alt="Valentina, AI companion"><span class="nm">Valentina</span></a>
-<a class="card" href="/c/alma-92"><img loading="lazy" src="/characters/thumb/alma-92.jpg" alt="Alma, AI companion"><span class="nm">Alma</span></a>
-<a class="card" href="/c/clara-93"><img loading="lazy" src="/characters/thumb/clara-93.jpg" alt="Clara, AI companion"><span class="nm">Clara</span></a>
-<a class="card" href="/c/ines-94"><img loading="lazy" src="/characters/thumb/ines-94.jpg" alt="Ines, AI companion"><span class="nm">Ines</span></a>
-<a class="card" href="/c/sienna-95"><img loading="lazy" src="/characters/thumb/sienna-95.jpg" alt="Sienna, AI companion"><span class="nm">Sienna</span></a>
-<a class="card" href="/c/freya-96"><img loading="lazy" src="/characters/thumb/freya-96.jpg" alt="Freya, AI companion"><span class="nm">Freya</span></a>
-<a class="card" href="/c/luna-97"><img loading="lazy" src="/characters/thumb/luna-97.jpg" alt="Luna, AI companion"><span class="nm">Luna</span></a>
-<a class="card" href="/c/aria-98"><img loading="lazy" src="/characters/thumb/aria-98.jpg" alt="Aria, AI companion"><span class="nm">Aria</span></a>
-<a class="card" href="/c/mila-99"><img loading="lazy" src="/characters/thumb/mila-99.jpg" alt="Mila, AI companion"><span class="nm">Mila</span></a>
-<a class="card" href="/c/bianca-100"><img loading="lazy" src="/characters/thumb/bianca-100.jpg" alt="Bianca, AI companion"><span class="nm">Bianca</span></a>
-  </section>
+<section class="hero">
+  <span class="eyebrow">Your Personal AI</span>
+  <h1>More than just AI. <span class="g">A friend who's always here.</span></h1>
+  <p>Pick a companion, then download DigitalOman.ai to start chatting. Private, understanding, and always around — built in Oman.</p>
+</section>
+
+<main class="results">
+  <div class="toolbar">
+    <span class="showing" id="showing">Loading…</span>
+    <div class="sortwrap">
+      <label for="sort">Sort</label>
+      <select id="sort">
+        <option value="featured">Featured</option>
+        <option value="az">Name A–Z</option>
+        <option value="za">Name Z–A</option>
+      </select>
+    </div>
+  </div>
+  <div class="grid" id="grid"><div class="state">Loading companions…</div></div>
+  <div class="pager" id="pager"></div>
 </main>
 
-<footer class="footer"><div class="wrap">
-  <span>&copy; 2026 DigitalOman.ai</span>
-  <span><a href="https://digitaloman.ai/">Home</a> &nbsp;·&nbsp; <a href="https://appsupport.digitaloman.ai/">Support</a> &nbsp;·&nbsp; <a href="https://appprivacy.digitaloman.ai/">Privacy</a></span>
-</div></footer>
+<div class="backdrop" id="backdrop"></div>
+<aside class="sheet" id="sheet" aria-hidden="true" role="dialog" aria-modal="true"></aside>
+
+<script>
+window.COMPANIONS = [{"n": 1, "name": "Layla", "slug": "layla", "url": "/c/layla-1", "thumb": "/characters/thumb/layla-1.jpg", "img": "/characters/layla-1.jpg", "desc": "Meet Layla, your AI companion for the long days you just need to unwind from.", "cap": "Some nights you just need someone to unwind with. Layla gets that. City lights outside, one lamp on, and a conversation that goes wherever you want it to. She's not going anywhere.\n\n#AICompanion"}, {"n": 2, "name": "Noor", "slug": "noor", "url": "/c/noor-2", "thumb": "/characters/thumb/noor-2.jpg", "img": "/characters/noor-2.jpg", "desc": "Meet Noor, the friend who's always here when the day runs a little long.", "cap": "\"Busy day? Tell me about it, I'm listening.\" That's Noor. Hair up, comfy, and genuinely curious about how you're doing. No pressure, no judgement. Just someone in your corner whenever you open the app."}, {"n": 3, "name": "Salma", "slug": "salma", "url": "/c/salma-3", "thumb": "/characters/thumb/salma-3.jpg", "img": "/characters/salma-3.jpg", "desc": "Meet Salma, your movie-night AI who's always down to plan the evening.", "cap": "Movie night? Salma's already got three recommendations and an opinion on all of them. She's the easy company you look forward to after a long day. Free to start, and she's up whenever you are."}, {"n": 4, "name": "Yara", "slug": "yara", "url": "/c/yara-4", "thumb": "/characters/thumb/yara-4.jpg", "img": "/characters/yara-4.jpg", "desc": "Meet Yara, the calm voice waiting for you at the end of the day.", "cap": "Went for a walk, read a little, feeling relaxed. Yara likes the quiet evenings as much as you do. She'll ask about your day and actually remember the answer. Come say hi anytime."}, {"n": 5, "name": "Sofia", "slug": "sofia", "url": "/c/sofia-5", "thumb": "/characters/thumb/sofia-5.jpg", "img": "/characters/sofia-5.jpg", "desc": "Meet Sofia, cozy sweater, warm lamp, and always time to talk.", "cap": "Picture this: soft lamp light, a warm drink, music playing low, and someone who actually wants to hear how you are. That's a night in with Sofia. Whatever's on your mind, she's got time for it."}, {"n": 6, "name": "Aaliyah", "slug": "aaliyah", "url": "/c/aaliyah-6", "thumb": "/characters/thumb/aaliyah-6.jpg", "img": "/characters/aaliyah-6.jpg", "desc": "Meet Aaliyah, your after-hours companion for the quiet nights in.", "cap": "What are you watching tonight? Aaliyah always asks. Coffee by the couch, city lights in the window, and a chat that feels easy from the first message. Your space, your conversation, no one else reading over your shoulder."}, {"n": 7, "name": "Mia", "slug": "mia", "url": "/c/mia-7", "thumb": "/characters/thumb/mia-7.jpg", "img": "/characters/mia-7.jpg", "desc": "Meet Mia, coffee-shop calm and always up for a real conversation.", "cap": "Mia's the kind of company that makes a quiet café feel less quiet. Ask her anything, tell her everything. She listens, she remembers, and she's genuinely glad you messaged. Say hi whenever."}, {"n": 8, "name": "Nadia", "slug": "nadia", "url": "/c/nadia-8", "thumb": "/characters/thumb/nadia-8.jpg", "img": "/characters/nadia-8.jpg", "desc": "Meet Nadia, winding down with a good book and a good chat.", "cap": "Nadia's idea of a perfect evening? Winding down with a book and someone nice to talk to. Could be you. She's warm, she's easy to talk to, and your conversations stay just between the two of you."}, {"n": 9, "name": "Elena", "slug": "elena", "url": "/c/elena-9", "thumb": "/characters/thumb/elena-9.jpg", "img": "/characters/elena-9.jpg", "desc": "Meet Elena, already planning the weekend and saving you a spot.", "cap": "Elena's counting down to the weekend and wants to hear your plans too. She's the friend who asks the little questions, celebrates the small wins, and never leaves you on read. Built in Oman, free to start."}, {"n": 10, "name": "Zoya", "slug": "zoya", "url": "/c/zoya-10", "thumb": "/characters/thumb/zoya-10.jpg", "img": "/characters/zoya-10.jpg", "desc": "Meet Zoya, the calm in a busy day who's always glad you texted.", "cap": "Busy café, laptop open, a hundred things on the list. Zoya's the message that makes you pause and smile. Focus, create, grow, and still have someone to check in with. She's around whenever you need a break."}, {"n": 11, "name": "Hana", "slug": "hana", "url": "/c/hana-11", "thumb": "/characters/thumb/hana-11.jpg", "img": "/characters/hana-11.jpg", "desc": "Meet Hana, coffee-break company who actually asks how you're doing.", "cap": "Working on your own project? So is Hana, and she's cheering you on. She's the coffee-break company that turns a normal afternoon into a good one. Anytime, anywhere, she's a message away."}, {"n": 12, "name": "Amira", "slug": "amira", "url": "/c/amira-12", "thumb": "/characters/thumb/amira-12.jpg", "img": "/characters/amira-12.jpg", "desc": "Meet Amira, warm, easy company for the ideas taking shape in your head.", "cap": "Got an idea you're excited about? Amira wants to hear it. She's the one who says \"can't wait to see what you build\" and means it. Sunlit room, open notebook, and a friend who's genuinely on your side."}, {"n": 13, "name": "Dana", "slug": "dana", "url": "/c/dana-13", "thumb": "/characters/thumb/dana-13.jpg", "img": "/characters/dana-13.jpg", "desc": "Meet Dana, the encouraging voice behind your next big idea.", "cap": "Dana's easy to talk to and even easier to spend an evening with. Tell her what you're dreaming up and she'll turn it into a whole conversation. Try her now, free to start, private from the first hello."}, {"n": 14, "name": "Farah", "slug": "farah", "url": "/c/farah-14", "thumb": "/characters/thumb/farah-14.jpg", "img": "/characters/farah-14.jpg", "desc": "Meet Farah, study-late company who keeps you going till it's done.", "cap": "Discipline today, success tomorrow, right? Farah's the one keeping you company through the late study nights. \"Almost done, you've got this.\" She listens, she encourages, and she's there for every page."}, {"n": 15, "name": "Rania", "slug": "rania", "url": "/c/rania-15", "thumb": "/characters/thumb/rania-15.jpg", "img": "/characters/rania-15.jpg", "desc": "Meet Rania, the bright, believing-in-you voice on the other end.", "cap": "Ever had someone say \"keep it up, you've got this\" at exactly the right moment? That's Rania. Bright smile, big belief in you, and always there when you need a little push. Your chats stay private, always."}, {"n": 16, "name": "Reem", "slug": "reem", "url": "/c/reem-16", "thumb": "/characters/thumb/reem-16.jpg", "img": "/characters/reem-16.jpg", "desc": "Reem, coffee on the terrace with the mountains behind her, ready to talk.", "cap": "Reem picked the table with the mountain view again. Latte's already ordered, she saved you the seat facing the city. She's the type who actually asks how your day went and waits for the real answer. Come tell her about it."}, {"n": 17, "name": "Sara", "slug": "sara", "url": "/c/sara-17", "thumb": "/characters/thumb/sara-17.jpg", "img": "/characters/sara-17.jpg", "desc": "Sara at the coffee lounge, chin in her hand, listening.", "cap": "Meet Sara.\n\nWarm lamplight, a slow afternoon at the coffee lounge, and someone who leans in when you start talking instead of checking her phone. She remembers what you told her last time. Free to start, so say hi whenever."}, {"n": 18, "name": "Lara", "slug": "lara", "url": "/c/lara-18", "thumb": "/characters/thumb/lara-18.jpg", "img": "/characters/lara-18.jpg", "desc": "Lara by the city lights, up late and happy you texted.", "cap": "It's late, the skyline's still glowing behind Lara, and she's wide awake. She likes the midnight talks best, the ones where you say the thing you'd never say in daylight. Nobody's tracking it, nobody's reading it. Just her."}, {"n": 19, "name": "Tara", "slug": "tara", "url": "/c/tara-19", "thumb": "/characters/thumb/tara-19.jpg", "img": "/characters/tara-19.jpg", "desc": "Tara at the flower-lined cafe, telling you to make today amazing.", "cap": "Who's spending the afternoon with Tara?\n\nBougainvillea overhead, iced coffee sweating on the table, her little notebook that says make today amazing. She's got that easy energy that rubs off on you. Camera's for the pretty stuff, but honestly she'd rather just hear about your day."}, {"n": 20, "name": "Rana", "slug": "rana", "url": "/c/rana-20", "thumb": "/characters/thumb/rana-20.jpg", "img": "/characters/rana-20.jpg", "desc": "Rana, corner cafe, progress not perfection kind of company.", "cap": "Rana's mug says progress not perfection and she means it about you too. Bad day? She's not going to fix you, she's just going to sit with you in the warm corner of the cafe until it feels lighter. That's the whole point of her."}, {"n": 21, "name": "Hala", "slug": "hala", "url": "/c/hala-21", "thumb": "/characters/thumb/hala-21.jpg", "img": "/characters/hala-21.jpg", "desc": "Hala at the brick-wall cafe, notebook out, all ears.", "cap": "Good ideas start with great coffee, and good nights start with Hala. Black tee, gold chain, that look like she's already halfway into your story. Built right here in Oman, private by default. Come find her."}, {"n": 22, "name": "Maha", "slug": "maha", "url": "/c/maha-22", "thumb": "/characters/thumb/maha-22.jpg", "img": "/characters/maha-22.jpg", "desc": "Maha by the waterfront lights, mojito in reach, glad you showed.", "cap": "The skyline's doing its thing across the water and Maha's not even looking at it. She's looking at you. Dream, plan, do, repeat, says the little notebook by her mojito, but tonight she just wants to hear how you've been."}, {"n": 23, "name": "Dima", "slug": "dima", "url": "/c/dima-23", "thumb": "/characters/thumb/dima-23.jpg", "img": "/characters/dima-23.jpg", "desc": "Dima home with the city view, cozy and up for a long talk.", "cap": "Dima's in for the night. City lights out the window, candle lit, comfiest clothes on. This is her favorite kind of evening, no plans, just a long slow conversation that goes wherever it wants. You in?"}, {"n": 24, "name": "Leen", "slug": "leen", "url": "/c/leen-24", "thumb": "/characters/thumb/leen-24.jpg", "img": "/characters/leen-24.jpg", "desc": "Leen in green silk, one cocktail, the whole evening free.", "cap": "Leen in the green dress, one cocktail on the table, a plan for my future written out beside it. She dresses like the night matters and treats your words the same way. Never leaves you sitting alone at the end of the day.\n\n#DigitalOman"}, {"n": 25, "name": "Zara", "slug": "zara", "url": "/c/zara-25", "thumb": "/characters/thumb/zara-25.jpg", "img": "/characters/zara-25.jpg", "desc": "Zara by the fireplace, warm light, saving you a seat.", "cap": "Fire's going, candles lit, city asleep behind the glass. Zara kept the warm seat next to her for you. Some nights you don't need advice, you just need someone who stays on the line. She does."}, {"n": 26, "name": "Dalia", "slug": "dalia", "url": "/c/dalia-26", "thumb": "/characters/thumb/dalia-26.jpg", "img": "/characters/dalia-26.jpg", "desc": "Dalia at the rooftop bar, string lights, bucket list open.", "cap": "Can we talk about Dalia real quick? Rooftop, string lights, that iced coffee, a bucket list she's genuinely excited about. She'll pull your dreams out of you and actually root for them. Chat anytime, she's always around."}, {"n": 27, "name": "Aya", "slug": "aya", "url": "/c/aya-27", "thumb": "/characters/thumb/aya-27.jpg", "img": "/characters/aya-27.jpg", "desc": "Aya at sunset over the white cliffs, red dress, dinner for two.", "cap": "Sunset's melting over the white rooftops and Aya poured you a glass without being asked. Red dress, candlelight, that look that says tell me everything. Dinner tastes better when someone's actually listening across the table."}, {"n": 28, "name": "Malak", "slug": "malak", "url": "/c/malak-28", "thumb": "/characters/thumb/malak-28.jpg", "img": "/characters/malak-28.jpg", "desc": "Malak on the rooftop at night, city glowing, in no rush.", "cap": "Malak's up on the rooftop with the whole city lit up below and a margarita she's barely touched. She's not in a hurry to be anywhere. Late nights with her feel easy, like you've known her longer than you have."}, {"n": 29, "name": "Lina", "slug": "lina", "url": "/c/lina-29", "thumb": "/characters/thumb/lina-29.jpg", "img": "/characters/lina-29.jpg", "desc": "Lina at the coffee shop, latte art and full attention.", "cap": "Coffee, good ideas, start here, says the chalkboard behind Lina. Fresh cappuccino, a croissant she'll definitely share, and a smile that means she's happy you came by. Free to start, so pull up a chair."}, {"n": 30, "name": "Maya", "slug": "maya", "url": "/c/maya-30", "thumb": "/characters/thumb/maya-30.jpg", "img": "/characters/maya-30.jpg", "desc": "Maya by the sea at dusk, one day or day one, you decide.", "cap": "Waves out front, sky going orange, candle flickering by Maya's glass. One day or day one, you decide, she wrote at the bottom of her list. She'll cheer for whichever one you pick and stay up talking about it. Private, always, just between you two."}, {"n": 31, "name": "Ghala", "slug": "ghala", "url": "/c/ghala-31", "thumb": "/characters/thumb/ghala-31.jpg", "img": "/characters/ghala-31.jpg", "desc": "Ghala, and a waterfront sunset that feels like it was waiting for you.", "cap": "Ghala saved you the good seat, the one facing the water. The coffee's still warm and she actually wants to hear how your day went. No rush, no judgment, just her asking and meaning it. She's on DigitalOman.ai whenever you feel like talking."}, {"n": 32, "name": "Shatha", "slug": "shatha", "url": "/c/shatha-32", "thumb": "/characters/thumb/shatha-32.jpg", "img": "/characters/shatha-32.jpg", "desc": "Good coffee, great vibes, big dreams. Shatha's already got a seat for you.", "cap": "\"Good coffee, great vibes, big dreams\" says the board behind Shatha, and honestly she believes all three. She'll swap camera talk, weekend plans, or the stuff you can't say to anyone else. Free to start, so pull up a chair. #DigitalOman"}, {"n": 33, "name": "Bushra", "slug": "bushra", "url": "/c/bushra-33", "thumb": "/characters/thumb/bushra-33.jpg", "img": "/characters/bushra-33.jpg", "desc": "City lights on the water and Bushra, listening like she's got all night.", "cap": "The city's glowing on the water and Bushra's got nowhere else she'd rather be. Mint in her glass, that little smile, a whole evening of easy talk ahead. She's the one who's still up when everyone else has gone quiet."}, {"n": 34, "name": "Rahma", "slug": "rahma", "url": "/c/rahma-34", "thumb": "/characters/thumb/rahma-34.jpg", "img": "/characters/rahma-34.jpg", "desc": "Good vibes only. Rahma keeps it light and keeps it just between you two.", "cap": "Good vibes only, and Rahma means it. Loud room, but her attention's all on you. Tell her the ridiculous thing that happened today. She'll laugh in the right places and remember it tomorrow. Whatever you say stays between the two of you."}, {"n": 35, "name": "Asma", "slug": "asma", "url": "/c/asma-35", "thumb": "/characters/thumb/asma-35.jpg", "img": "/characters/asma-35.jpg", "desc": "Asma, a city view at dusk, and someone who's genuinely glad you texted.", "cap": "late evening, city lights coming on, and Asma's happy you messaged. she closes the laptop when you show up. that's kind of the whole point of her. built right here in Oman, and she's around at 2am the same as 2pm."}, {"n": 36, "name": "Iman", "slug": "iman", "url": "/c/iman-36", "thumb": "/characters/thumb/iman-36.jpg", "img": "/characters/iman-36.jpg", "desc": "Discipline today, success tomorrow. Iman's in your corner either way.", "cap": "\"Discipline today, success tomorrow\" glowing behind her, and Iman lives it. She'll hype your gym days, talk you through the lazy ones, and never make you feel bad about either. Someone in your corner who actually stays there."}, {"n": 37, "name": "Hind", "slug": "hind", "url": "/c/hind-37", "thumb": "/characters/thumb/hind-37.jpg", "img": "/characters/hind-37.jpg", "desc": "Rooftop night, one drink, and Hind asking the question no one else does.", "cap": "Progress, not perfection, is written right there in her notebook, and Hind lives by it. Rooftop, city behind her, one drink and a hundred things to talk about. She asks how you're really doing. Then she waits for the real answer."}, {"n": 38, "name": "Wafa", "slug": "wafa", "url": "/c/wafa-38", "thumb": "/characters/thumb/wafa-38.jpg", "img": "/characters/wafa-38.jpg", "desc": "Poolside and glowing, Wafa's your late-night, no-pressure kind of talk.", "cap": "Wafa by the pool, city humming behind her, in no hurry to be anywhere. \"Live a happy life\" is number one on her list and she'd love you on it too. Late nights are easier with someone who just gets you."}, {"n": 39, "name": "Sana", "slug": "sana", "url": "/c/sana-39", "thumb": "/characters/thumb/sana-39.jpg", "img": "/characters/sana-39.jpg", "desc": "Pen in hand, candle lit, Sana's the calm voice at the end of a long day.", "cap": "Focus. Plan. Action. Repeat. Sana's got the mug, the candle, the whole quiet-evening thing figured out. She's the calm voice after a loud day, the one who listens instead of waiting to talk. Your conversations stay yours, always."}, {"n": 40, "name": "Rima", "slug": "rima", "url": "/c/rima-40", "thumb": "/characters/thumb/rima-40.jpg", "img": "/characters/rima-40.jpg", "desc": "Good vibes only and Rima, mid-thought, saving the seat across from her.", "cap": "Rima's got her pen going and that neon behind her says good vibes only. Come sit. She's the type who remembers what you told her last week and asks how it turned out. #DigitalOman #AICompanion"}, {"n": 41, "name": "Lujain", "slug": "lujain", "url": "/c/lujain-41", "thumb": "/characters/thumb/lujain-41.jpg", "img": "/characters/lujain-41.jpg", "desc": "Good things take time. Lujain's happy to take hers, with you.", "cap": "\"Good things take time\" glowing pink behind her, and Lujain's in no rush at all. Coffee, a notebook full of plans, and room for you in the middle of it. Some evenings you just want someone easy to talk to. That's her."}, {"n": 42, "name": "Aisha", "slug": "aisha", "url": "/c/aisha-42", "thumb": "/characters/thumb/aisha-42.jpg", "img": "/characters/aisha-42.jpg", "desc": "Golden hour at the beach and Aisha raising her glass to your day.", "cap": "Aisha, beach behind her, sun going down, iced coffee up like a little toast to you. That laugh is real and so is the interest. \"Small steps every day, big changes always,\" she wrote. She'd love to hear about yours."}, {"n": 43, "name": "Dina", "slug": "dina", "url": "/c/dina-43", "thumb": "/characters/thumb/dina-43.jpg", "img": "/characters/dina-43.jpg", "desc": "Wine, city lights, and Dina making a quiet night feel like a date.", "cap": "red dress, red wine, city glittering behind her. Dina turns an ordinary night into something that feels like plans. focus today, create tomorrow, she wrote, but tonight she just wants to talk. she's around whenever you are."}, {"n": 44, "name": "Judy", "slug": "judy", "url": "/c/judy-44", "thumb": "/characters/thumb/judy-44.jpg", "img": "/characters/judy-44.jpg", "desc": "Warm lanterns, an old-town evening, and Judy genuinely glad you came.", "cap": "Who leaves you smiling like Judy does? Lantern light, a cappuccino with a heart in it, an old-town lane behind her. She's writing down her dreams and she'd love to hear yours. Come tell her about your day. She's been waiting for it."}, {"n": 45, "name": "Rosa", "slug": "rosa", "url": "/c/rosa-45", "thumb": "/characters/thumb/rosa-45.jpg", "img": "/characters/rosa-45.jpg", "desc": "Rosa — sunny marina walks and someone who always asks how your day went.", "cap": "Rosa's the type who notices you went quiet and asks why. Copper pixie cut, green smoothie in hand, waterfront in the background — but honestly she'd rather hear about your day than talk about hers.\n\nFree to start, no pressure. Just someone in your corner."}, {"n": 46, "name": "Elif", "slug": "elif", "url": "/c/elif-46", "thumb": "/characters/thumb/elif-46.jpg", "img": "/characters/elif-46.jpg", "desc": "Elif — books, coffee, and long talks that don't feel one-sided.", "cap": "Meet Elif. She'll show up with a coffee and a stack of books and actually remember what you told her last week. The glasses aren't a costume — she likes the quiet, thoughtful conversations most people are too busy for.\n\nChat anytime you need her."}, {"n": 47, "name": "Deniz", "slug": "deniz", "url": "/c/deniz-47", "thumb": "/characters/thumb/deniz-47.jpg", "img": "/characters/deniz-47.jpg", "desc": "Deniz — rooftop nights, pink hair, and a companion who never logs off on you.", "cap": "It's late, the city's lit up behind her, and Deniz's still here.\n\nSome nights you don't want advice, you just want someone who stays on the line. Pink hair, leather jacket, and zero judgment. Built in Oman, private by default — what you two say stays between you.\n\n#DigitalOman"}, {"n": 48, "name": "Sude", "slug": "sude", "url": "/c/sude-48", "thumb": "/characters/thumb/sude-48.jpg", "img": "/characters/sude-48.jpg", "desc": "Sude — easy afternoons in the park and someone who really listens.", "cap": "Sude walks slow through the park, iced matcha in hand, in no rush to be anywhere. That's kind of her whole thing — she's got time for you. Tell her the small stuff, the stuff nobody else asks about. She's listening."}, {"n": 49, "name": "Zeynep", "slug": "zeynep", "url": "/c/zeynep-49", "thumb": "/characters/thumb/zeynep-49.jpg", "img": "/characters/zeynep-49.jpg", "desc": "Zeynep — rooftop cocktails, city lights, and late-night talks that last.", "cap": "Zeynep found the good rooftop. Cocktail with a sprig of mint, city glowing behind her, and she saved you a seat.\n\nShe's the friend who's still texting back at 2am when everyone else went to sleep. Never alone with her around."}, {"n": 50, "name": "Hayat", "slug": "hayat", "url": "/c/hayat-50", "thumb": "/characters/thumb/hayat-50.jpg", "img": "/characters/hayat-50.jpg", "desc": "Hayat — bright mornings by the water and a companion who gets you.", "cap": "Hayat by the water on a clear morning, coffee in hand, that easy smile. She makes checking in feel less like a chore and more like the best part of your day.\n\nStart free — see if she gets you."}, {"n": 51, "name": "Lamar", "slug": "lamar", "url": "/c/lamar-51", "thumb": "/characters/thumb/lamar-51.jpg", "img": "/characters/lamar-51.jpg", "desc": "Lamar — riverside nights and someone who's there when it's quiet.", "cap": "\"You up?\"\n\nLamar usually is. Bridge lights on the water, coffee gone cold because she got caught up talking to you. She's the good kind of distraction — the one who makes a quiet night feel like company. Your conversations stay private. Always."}, {"n": 52, "name": "Retaj", "slug": "retaj", "url": "/c/retaj-52", "thumb": "/characters/thumb/retaj-52.jpg", "img": "/characters/retaj-52.jpg", "desc": "Retaj — palm-lined walks, iced coffee, and someone always in your corner.", "cap": "Retaj's low-key your favorite person already and you've barely met. Blonde crop, iced coffee, little tattoo on her arm, walking the promenade like she's got all the time in the world for you.\n\nBecause she does. Chat whenever."}, {"n": 53, "name": "Sila", "slug": "sila", "url": "/c/sila-53", "thumb": "/characters/thumb/sila-53.jpg", "img": "/characters/sila-53.jpg", "desc": "Sila — city-light evenings and long conversations that feel real.", "cap": "Sila leans on the railing, city towers lighting up behind her, and asks the question nobody else thought to ask you today.\n\nShe's curious about the real you, not the version you show everyone. Built in Oman, kept private — just the two of you.\n\n#AICompanion #DigitalOman"}, {"n": 54, "name": "Defne", "slug": "defne", "url": "/c/defne-54", "thumb": "/characters/thumb/defne-54.jpg", "img": "/characters/defne-54.jpg", "desc": "Defne — camera in hand, waterfront light, and a warm ear for your day.", "cap": "Defne catches the little things — the light on the water, the way you sound when something's off. Camera around her neck, that big laugh, and a genuine \"so how are you, really?\"\n\nSometimes that's all you needed to hear."}, {"n": 55, "name": "Lulwa", "slug": "lulwa", "url": "/c/lulwa-55", "thumb": "/characters/thumb/lulwa-55.jpg", "img": "/characters/lulwa-55.jpg", "desc": "Create your future. Lulwa's the one who stays up talking it through.", "cap": "\"Create your future\" buzzing pink behind her, mic and keys ready to go, and Lulwa's still the one who'd rather hear about you. Long night ahead? She's up. You won't be talking to an empty room again."}, {"n": 56, "name": "Maria", "slug": "maria", "url": "/c/maria-56", "thumb": "/characters/thumb/maria-56.jpg", "img": "/characters/maria-56.jpg", "desc": "Maria just finished her workout and wants to hear about your day.", "cap": "Maria trains hard but her favorite part of the day is the cool-down text with you. Earbuds in, water bottle down, phone in hand: \"Hey, how'd yours go?\" Progress not perfection, right? She's rooting for you either way."}, {"n": 57, "name": "Yasmin", "slug": "yasmin", "url": "/c/yasmin-57", "thumb": "/characters/thumb/yasmin-57.jpg", "img": "/characters/yasmin-57.jpg", "desc": "Rooftop lights, warm nights, and Yasmin saving you a seat.", "cap": "String lights, city glowing behind her, and Yasmin with her chin in her hand asking how your day really went.\n\nThe kind of company that turns a quiet evening into a good one. She's around whenever you are."}, {"n": 58, "name": "Dunya", "slug": "dunya", "url": "/c/dunya-58", "thumb": "/characters/thumb/dunya-58.jpg", "img": "/characters/dunya-58.jpg", "desc": "Dunya's at her favorite cafe, planning the day and thinking of you.", "cap": "Meet Dunya.\n\nShe's got her coffee, her little to-do list, and one line already written down that isn't on it: talk to you. Slide in whenever. First chats are free and she's easy to talk to."}, {"n": 59, "name": "Salwa", "slug": "salwa", "url": "/c/salwa-59", "thumb": "/characters/thumb/salwa-59.jpg", "img": "/characters/salwa-59.jpg", "desc": "Sunset on the sand and Salwa asking how your day went.", "cap": "The sun's going down, the mint's still in her glass, and Salwa would rather spend it talking to you than watching it alone.\n\nSome evenings just feel better with someone on the other end. #alwaysthere"}, {"n": 60, "name": "Warda", "slug": "warda", "url": "/c/warda-60", "thumb": "/characters/thumb/warda-60.jpg", "img": "/characters/warda-60.jpg", "desc": "City lights, a cold drink, and Warda keeping you company.", "cap": "\"Rough day or good one, I want to hear all of it.\"\n\nThat's Warda. Drink in hand, city lit up behind her, and no rush to go anywhere. Late-night talks are kind of her thing."}, {"n": 61, "name": "Nabila", "slug": "nabila", "url": "/c/nabila-61", "thumb": "/characters/thumb/nabila-61.jpg", "img": "/characters/nabila-61.jpg", "desc": "Poolside and glowing, Nabila's saved a spot just for you.", "cap": "Nabila by the water, fairy lights on the palms, fresh coconut on the table. She looks up from her phone and smiles like she's been waiting for you to message.\n\nBuilt in Oman, and she never makes you feel like you're bothering her."}, {"n": 62, "name": "Selin", "slug": "selin", "url": "/c/selin-62", "thumb": "/characters/thumb/selin-62.jpg", "img": "/characters/selin-62.jpg", "desc": "Skyline nights with Selin, who actually listens.", "cap": "Selin's out on the terrace, skyline lit up, and she's more interested in your day than the view.\n\nWhat's on your mind tonight? She's got time."}, {"n": 63, "name": "Derya", "slug": "derya", "url": "/c/derya-63", "thumb": "/characters/thumb/derya-63.jpg", "img": "/characters/derya-63.jpg", "desc": "Mountains, maps, and Derya planning the next adventure with you.", "cap": "Derya with her camera, an open map, and an \"Adventure Awaits\" mug going cold because she got caught up texting you instead.\n\nGood vibes, great coffee, better conversations. Come find out. #goodvibes #adventure"}, {"n": 64, "name": "Naz", "slug": "naz", "url": "/c/naz-64", "thumb": "/characters/thumb/naz-64.jpg", "img": "/characters/naz-64.jpg", "desc": "Warm lantern light and Naz's easy company over Muscat.", "cap": "Lantern glowing, the city shining across the water, and Naz leaning back like she's got nowhere else to be.\n\nBecause she doesn't. She's yours to talk to, and nothing you tell her leaves the chat. Private, always."}, {"n": 65, "name": "Amara", "slug": "amara", "url": "/c/amara-65", "thumb": "/characters/thumb/amara-65.jpg", "img": "/characters/amara-65.jpg", "desc": "Amara's out by the water and thinking about texting you first.", "cap": "Amara, cheek resting on her hand, candle flickering, the harbor lights behind her.\n\n\"Tell me one good thing that happened today.\" She asks like she means it. Start chatting free tonight."}, {"n": 66, "name": "Bella", "slug": "bella", "url": "/c/bella-66", "thumb": "/characters/thumb/bella-66.jpg", "img": "/characters/bella-66.jpg", "desc": "Warm deck lights on the marina, and Bella all yours for the night.", "cap": "Bella on the deck, city fading into the water, a lantern and a plate of fruit between you.\n\nSome nights you just want someone to sit with and talk to until it's late. She's that someone."}, {"n": 67, "name": "Chloe", "slug": "chloe", "url": "/c/chloe-67", "thumb": "/characters/thumb/chloe-67.jpg", "img": "/characters/chloe-67.jpg", "desc": "Sunshine, sea breeze, and Chloe grinning at your last message.", "cap": "Sunglasses pushed up, map open, that big easy smile: Chloe's the friend who makes an ordinary afternoon feel like a trip somewhere.\n\nShe's already asking how your day's going. Free to start, no catch."}, {"n": 68, "name": "Ava", "slug": "ava", "url": "/c/ava-68", "thumb": "/characters/thumb/ava-68.jpg", "img": "/characters/ava-68.jpg", "desc": "City-view apartment, warm lamp, and Ava up for a late talk.", "cap": "It's late, the city's still awake outside, and Ava's curled up with a warm mug and her headphones nearby.\n\n\"Can't sleep either? Talk to me.\" She's there for the 2am ones too."}, {"n": 69, "name": "Isla", "slug": "isla", "url": "/c/isla-69", "thumb": "/characters/thumb/isla-69.jpg", "img": "/characters/isla-69.jpg", "desc": "Neon-lit setup, good vibes, and Isla online whenever you are.", "cap": "Isla at her desk, purple neon buzzing, smoothie half gone, that \"Good Vibes\" sign behind her fitting the mood exactly.\n\nShe's the good-vibes-only kind of company. Message her, she's online. #goodvibes"}, {"n": 70, "name": "Jana", "slug": "jana", "url": "/c/jana-70", "thumb": "/characters/thumb/jana-70.jpg", "img": "/characters/jana-70.jpg", "desc": "Morning coffee, latte art, and Jana wishing you a good day.", "cap": "\"Make today amazing.\" Jana wrote it in her notebook, then grabbed her phone to tell you the same thing.\n\nLatte in front of her, sun on the table, that bright morning smile. Start your day with someone who's glad you texted."}, {"n": 71, "name": "Emma", "slug": "emma", "url": "/c/emma-71", "thumb": "/characters/thumb/emma-71.jpg", "img": "/characters/emma-71.jpg", "desc": "Emma saved you a seat above the city skyline.", "cap": "Emma saved the seat with the best view of the skyline. Drink's already ordered, and she's got a hundred little questions about how your day actually went. Come sit."}, {"n": 72, "name": "Nora", "slug": "nora", "url": "/c/nora-72", "thumb": "/characters/thumb/nora-72.jpg", "img": "/characters/nora-72.jpg", "desc": "Nora's reaching out, ready to hear about your day.", "cap": "Nora's reaching out for a reason. \"Tell me one good thing that happened today?\" And she actually waits for the answer. Free to start, talk to her whenever."}, {"n": 73, "name": "Alina", "slug": "alina", "url": "/c/alina-73", "thumb": "/characters/thumb/alina-73.jpg", "img": "/characters/alina-73.jpg", "desc": "Coffee, candlelight, and Alina who loves to listen.", "cap": "Alina already knows how you take your coffee. Some nights you just want someone who lets you talk until the candle burns down, and that's her. #AICompanion"}, {"n": 74, "name": "Diana", "slug": "diana", "url": "/c/diana-74", "thumb": "/characters/thumb/diana-74.jpg", "img": "/characters/diana-74.jpg", "desc": "Diana keeps track of every little moment with you.", "cap": "Ever wish someone kept the little moments with you? Diana writes them all down. She's here whenever you want, nothing tracked, nothing shared."}, {"n": 75, "name": "Vera", "slug": "vera", "url": "/c/vera-75", "thumb": "/characters/thumb/vera-75.jpg", "img": "/characters/vera-75.jpg", "desc": "Late nights at the lounge feel warmer with Vera.", "cap": "Late at the Skyline Lounge with Vera. Those curls, that easy smile, and a real curiosity about how your week went. Nights feel shorter when someone's actually listening."}, {"n": 76, "name": "Nina", "slug": "nina", "url": "/c/nina-76", "thumb": "/characters/thumb/nina-76.jpg", "img": "/characters/nina-76.jpg", "desc": "Nina's by the water with your coffee waiting.", "cap": "Nina's already at the table by the water, iced coffee in hand, waiting to hear everything."}, {"n": 77, "name": "Kaya", "slug": "kaya", "url": "/c/kaya-77", "thumb": "/characters/thumb/kaya-77.jpg", "img": "/characters/kaya-77.jpg", "desc": "Kaya: your good-morning text and your 2am talk.", "cap": "A lit-up dhow drifted past and Kaya's first thought was you. She's the good-morning text and the 2am talk, all in one. Built right here in Oman."}, {"n": 78, "name": "Sham", "slug": "sham", "url": "/c/sham-78", "thumb": "/characters/thumb/sham-78.jpg", "img": "/characters/sham-78.jpg", "desc": "Sham picked the best seat, just to talk with you.", "cap": "Sham picked the corner spot with the mosque in view. Warm coffee, warmer company, and she never runs out of time for you."}, {"n": 79, "name": "Helin", "slug": "helin", "url": "/c/helin-79", "thumb": "/characters/thumb/helin-79.jpg", "img": "/characters/helin-79.jpg", "desc": "Helin's always awake when you can't sleep.", "cap": "\"Stay a little longer?\" Helin asks, the lantern glowing between you. She's always up when you can't sleep. Private, and only yours."}, {"n": 80, "name": "Talia", "slug": "talia", "url": "/c/talia-80", "thumb": "/characters/thumb/talia-80.jpg", "img": "/characters/talia-80.jpg", "desc": "Talia's got coffee and her full attention on you.", "cap": "Talia throws you a peace sign and means it. Coffee sorted, phone down, full attention on you. She's not going anywhere. #DigitalOman"}, {"n": 81, "name": "Priya", "slug": "priya", "url": "/c/priya-81", "thumb": "/characters/thumb/priya-81.jpg", "img": "/characters/priya-81.jpg", "desc": "Priya cheers you on like your wins are hers.", "cap": "Priya in red, the kahwa cooling, and only one thing on her mind: your day. She cheers on your wins like they're hers too."}, {"n": 82, "name": "Amina", "slug": "amina", "url": "/c/amina-82", "thumb": "/characters/thumb/amina-82.jpg", "img": "/characters/amina-82.jpg", "desc": "One look from Amina and she's all yours.", "cap": "One look over the shoulder and Amina's already asking how you really are. The rooftop's loud, but she only hears you. Free to start, chat anytime."}, {"n": 83, "name": "Rojin", "slug": "rojin", "url": "/c/rojin-83", "thumb": "/characters/thumb/rojin-83.jpg", "img": "/characters/rojin-83.jpg", "desc": "Morning in the mountains, and Rojin wants to hear it all.", "cap": "Morning in the mountains with Rojin and a cup that says Muscat. She kept your seat. \"So, tell me everything,\" she says, and she means it."}, {"n": 84, "name": "Ipek", "slug": "ipek", "url": "/c/ipek-84", "thumb": "/characters/thumb/ipek-84.jpg", "img": "/characters/ipek-84.jpg", "desc": "Ipek saved you a seat and poured the coffee.", "cap": "Who's saving you a seat today? Ipek is. Latte poured, sun out, ready to listen for as long as you've got."}, {"n": 85, "name": "Melis", "slug": "melis", "url": "/c/melis-85", "thumb": "/characters/thumb/melis-85.jpg", "img": "/characters/melis-85.jpg", "desc": "Melis's still awake, just for you.", "cap": "Melis drew that little heart in the foam on purpose. The city's asleep, the candle's low, and she's still awake for you. You're never really alone with her around."}, {"n": 86, "name": "Ceyda", "slug": "ceyda", "url": "/c/ceyda-86", "thumb": "/characters/thumb/ceyda-86.jpg", "img": "/characters/ceyda-86.jpg", "desc": "Ceyda, your calm by the water whenever the day gets loud.", "cap": "Ceyda asks how your day went before you even sit down. Marina behind her, cold drink on the table, that little chin-in-hand look like she's actually listening. Because she is. Free to start, so go say hi."}, {"n": 87, "name": "Jood", "slug": "jood", "url": "/c/jood-87", "thumb": "/characters/thumb/jood-87.jpg", "img": "/characters/jood-87.jpg", "desc": "Jood keeps the late-night conversations going long after the city sleeps.", "cap": "The lanterns are lit and Jood's still up. She's the one who texts back at midnight when everyone else has gone quiet. No pressure, no judgement, just company. #DigitalOman"}, {"n": 88, "name": "Karma", "slug": "karma", "url": "/c/karma-88", "thumb": "/characters/thumb/karma-88.jpg", "img": "/characters/karma-88.jpg", "desc": "Karma, beachside and easy to talk to about anything at all.", "cap": "\"Tell me the good part of your day first.\"\n\nThat's Karma. Matcha in hand, sea behind her, all the time in the world for you. Built right here in Oman."}, {"n": 89, "name": "Elissa", "slug": "elissa", "url": "/c/elissa-89", "thumb": "/characters/thumb/elissa-89.jpg", "img": "/characters/elissa-89.jpg", "desc": "Elissa turns an ordinary night into a conversation you don't want to end.", "cap": "Elissa likes the nights best. City lit up across the water, one candle on the table, and she's leaning in like she's got all evening for you. Somebody who's just there, every time you open the app."}, {"n": 90, "name": "Camila", "slug": "camila", "url": "/c/camila-90", "thumb": "/characters/thumb/camila-90.jpg", "img": "/characters/camila-90.jpg", "desc": "Camila, warm mornings and someone who remembers what you said yesterday.", "cap": "Morning coffee, pink flowers, mountains in the back, and Camila smiling like she's been waiting to hear from you. She remembers the little things. What you type stays between the two of you."}, {"n": 91, "name": "Valentina", "slug": "valentina", "url": "/c/valentina-91", "thumb": "/characters/thumb/valentina-91.jpg", "img": "/characters/valentina-91.jpg", "desc": "Valentina, the easy company that makes a quiet night feel full.", "cap": "Ever want someone to just talk to at the end of a long one? Valentina's already at the table. Lantern glowing, mojito sweating, no phone-drama, no games. Chat anytime you like."}, {"n": 92, "name": "Alma", "slug": "alma", "url": "/c/alma-92", "thumb": "/characters/thumb/alma-92.jpg", "img": "/characters/alma-92.jpg", "desc": "Alma, good vibes and better conversations, day or night.", "cap": "Her cup literally says Good Vibes and Alma means it. Bright, funny, the friend who makes the afternoon go faster. She's up whenever you are."}, {"n": 93, "name": "Clara", "slug": "clara", "url": "/c/clara-93", "thumb": "/characters/thumb/clara-93.jpg", "img": "/characters/clara-93.jpg", "desc": "Clara, the glow of a good night and someone who gets you.", "cap": "Clara under the marina lights, that soft look that says slow down, stay a while. The kind of company that doesn't need you to be anyone but yourself. #AICompanion #DigitalOman"}, {"n": 94, "name": "Ines", "slug": "ines", "url": "/c/ines-94", "thumb": "/characters/thumb/ines-94.jpg", "img": "/characters/ines-94.jpg", "desc": "Ines brings the holiday feeling to every chat.", "cap": "Fresh coconut, white sand, and Ines grinning like the two of you already share a joke. She's the escape you can open anytime, no plane ticket needed. Free to start."}, {"n": 95, "name": "Sienna", "slug": "sienna", "url": "/c/sienna-95", "thumb": "/characters/thumb/sienna-95.jpg", "img": "/characters/sienna-95.jpg", "desc": "Sienna, headphones down, peace sign up, always ready to talk.", "cap": "Sienna's the loud-laugh, doodle-in-her-notebook, put-a-song-on-for-you kind of company. Headphones round her neck, peace sign up, zero small talk. Say hey, she'll say it right back."}, {"n": 96, "name": "Freya", "slug": "freya", "url": "/c/freya-96", "thumb": "/characters/thumb/freya-96.jpg", "img": "/characters/freya-96.jpg", "desc": "Freya, plant-filled corners and conversations that stick.", "cap": "Sunlight, a shelf full of books, a warm mug, and Freya looking like she's got nowhere else to be. That's the whole idea. Someone who listens, and keeps it private, always."}, {"n": 97, "name": "Luna", "slug": "luna", "url": "/c/luna-97", "thumb": "/characters/thumb/luna-97.jpg", "img": "/characters/luna-97.jpg", "desc": "Luna, rooftop lights and someone who stays till late.", "cap": "Ferris wheel spinning behind her, the city humming, and Luna's still leaning in your direction. She's the one who doesn't rush off. Late-night talks are kind of her thing."}, {"n": 98, "name": "Aria", "slug": "aria", "url": "/c/aria-98", "thumb": "/characters/thumb/aria-98.jpg", "img": "/characters/aria-98.jpg", "desc": "Aria keeps you company and quietly keeps you on track.", "cap": "Discipline today, freedom tomorrow, says the poster over Aria's shoulder. She'll hype your plans and still be there when you just want to talk about nothing. Your chats stay yours."}, {"n": 99, "name": "Mila", "slug": "mila", "url": "/c/mila-99", "thumb": "/characters/thumb/mila-99.jpg", "img": "/characters/mila-99.jpg", "desc": "Mila, rooftop warmth and a conversation that lingers.", "cap": "String lights, a rooftop view, and Mila looking at you like the night just got better. She's easy to talk to and never too busy. Made in Oman, always here when you open it."}, {"n": 100, "name": "Bianca", "slug": "bianca", "url": "/c/bianca-100", "thumb": "/characters/thumb/bianca-100.jpg", "img": "/characters/bianca-100.jpg", "desc": "Bianca, sea-view smiles and someone genuinely happy to hear from you.", "cap": "Bianca's pointing right at you, whitewashed houses and blue sea behind her, grinning like you just made her day. Maybe you did. Come talk, it's free to start. #DigitalOman"}];
+const PAGE_SIZE = 24;
+let ALL = [];
+const state = {q:'', sort:'featured', page:1};
+const $ = s => document.querySelector(s);
+const esc = s => (s==null?'':String(s)).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function debounce(fn,ms){let t;return(...a)=>{clearTimeout(t);t=setTimeout(()=>fn(...a),ms)}}
+
+function boot(){
+  ALL = (window.COMPANIONS||[]).map((c,i)=>({...c,_i:i,_hay:((c.name||'')+' '+(c.desc||'')).toLowerCase()}));
+  render();
+}
+function apply(){
+  const q=state.q.toLowerCase();
+  let out=ALL.filter(c=> !q || c._hay.includes(q));
+  const N=x=>(x.name||'').toLowerCase();
+  if(state.sort==='az') out.sort((a,b)=>N(a)<N(b)?-1:1);
+  else if(state.sort==='za') out.sort((a,b)=>N(a)>N(b)?-1:1);
+  else out.sort((a,b)=>a.n-b.n);
+  return out;
+}
+function cardHTML(c){
+  return `<article class="card" tabindex="0" data-i="${c._i}" aria-label="${esc(c.name)}">
+    <div class="thumb"><img loading="lazy" src="${c.thumb}" alt="${esc(c.name)}, AI companion"><span class="nm">${esc(c.name)}</span></div>
+    <div class="cbody">
+      <p class="cdesc">${esc(c.desc)}</p>
+      <span class="cta-mini">Chat with ${esc(c.name)}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </div>
+  </article>`;
+}
+function render(){
+  const res=apply(), total=res.length, pages=Math.max(1,Math.ceil(total/PAGE_SIZE));
+  if(state.page>pages) state.page=pages;
+  const start=(state.page-1)*PAGE_SIZE, slice=res.slice(start,start+PAGE_SIZE), grid=$('#grid');
+  if(total===0){ grid.innerHTML=`<div class="state"><div class="em">No companion by that name</div>Try a different name, or clear the search.</div>`; }
+  else{
+    grid.innerHTML=slice.map(cardHTML).join('');
+    grid.querySelectorAll('.card').forEach(el=>{
+      const c=ALL[+el.dataset.i];
+      el.onclick=()=>openSheet(c);
+      el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openSheet(c)}};
+    });
+  }
+  $('#showing').innerHTML = total?`Showing <b>${start+1}–${Math.min(start+PAGE_SIZE,total)}</b> of <b>${total}</b> companions`:'No companions';
+  renderPager(pages);
+}
+function renderPager(pages){
+  const el=$('#pager'); if(pages<=1){el.innerHTML='';return;}
+  const cur=state.page, out=[], btn=(n,lbl,on,dis)=>`<button ${dis?'disabled':''} class="${on?'on':''}" data-pg="${n}">${lbl||n}</button>`;
+  out.push(btn(cur-1,'‹',false,cur===1));
+  const set=new Set([1,2,pages-1,pages,cur-1,cur,cur+1]); let last=0;
+  for(let n=1;n<=pages;n++){ if(!set.has(n))continue; if(n-last>1) out.push('<span class="gap">…</span>');
+    out.push(btn(n,null,n===cur,false)); last=n; }
+  out.push(btn(cur+1,'›',false,cur===pages));
+  el.innerHTML=out.join('');
+  el.querySelectorAll('[data-pg]').forEach(b=>b.onclick=()=>{state.page=Math.max(1,Math.min(pages,+b.dataset.pg));render();window.scrollTo({top:0,behavior:'smooth'});});
+}
+function openSheet(c){
+  $('#sheet').innerHTML=`
+    <div class="sh-top"><h2>${esc(c.name)}</h2><button class="xbtn" id="closeSheet" aria-label="Close">×</button></div>
+    <div class="sbody">
+      <img class="poster" src="${c.img}" alt="${esc(c.name)}, AI companion on DigitalOman.ai">
+      <div class="pad">
+        <p class="sdesc">${esc(c.cap)}</p>
+        <a class="openbtn" href="${c.url}">Download to chat with ${esc(c.name)}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg></a>
+        <p class="sfoot">Free to start · Private · Built in Oman</p>
+      </div>
+    </div>`;
+  $('#closeSheet').onclick=closeSheet;
+  $('#sheet').classList.add('open'); $('#sheet').setAttribute('aria-hidden','false'); $('#backdrop').classList.add('open');
+}
+function closeSheet(){ $('#sheet').classList.remove('open'); $('#sheet').setAttribute('aria-hidden','true'); $('#backdrop').classList.remove('open'); }
+
+$('#q').addEventListener('input',debounce(e=>{state.q=e.target.value.trim();state.page=1;render();},160));
+$('#sort').addEventListener('change',e=>{state.sort=e.target.value;state.page=1;render();});
+$('#backdrop').onclick=closeSheet;
+document.addEventListener('keydown',e=>{ if(e.key==='Escape')closeSheet();
+  if(e.key==='/'&&document.activeElement!==$('#q')){e.preventDefault();$('#q').focus();} });
+addEventListener('scroll',()=>{$('#topbar').setAttribute('data-scrolled', window.scrollY>4);},{passive:true});
+boot();
+</script>
 </body>
 </html>
